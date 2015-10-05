@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebBrowser", "SimpleWebBrowser.csproj", "{169BB08B-8A55-4761-A269-876297E83618}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Competidor de IE-final", "Final\Competidor de IE-final.csproj", "{169BB08B-8A55-4761-A269-876297E83618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Competidor de IE-inicial", "Inicio\Competidor de IE-inicial\Competidor de IE-inicial.csproj", "{4466CA4C-02EF-4F13-9B52-BF5A844F2F85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{169BB08B-8A55-4761-A269-876297E83618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{169BB08B-8A55-4761-A269-876297E83618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{169BB08B-8A55-4761-A269-876297E83618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4466CA4C-02EF-4F13-9B52-BF5A844F2F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4466CA4C-02EF-4F13-9B52-BF5A844F2F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4466CA4C-02EF-4F13-9B52-BF5A844F2F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4466CA4C-02EF-4F13-9B52-BF5A844F2F85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

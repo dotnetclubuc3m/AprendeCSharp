@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDDLED", "HDDLED\HDDLED.csproj", "{547820D5-B85B-49ED-84AC-36832D1A0E36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luz disco duro-final", "Final\HDDLED\Luz disco duro-final.csproj", "{547820D5-B85B-49ED-84AC-36832D1A0E36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luz disco duro", "Inicio\Luz disco duro\Luz disco duro.csproj", "{0D9AD35A-0CD1-437D-B26C-EAE2C7867C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{547820D5-B85B-49ED-84AC-36832D1A0E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{547820D5-B85B-49ED-84AC-36832D1A0E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{547820D5-B85B-49ED-84AC-36832D1A0E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9AD35A-0CD1-437D-B26C-EAE2C7867C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9AD35A-0CD1-437D-B26C-EAE2C7867C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9AD35A-0CD1-437D-B26C-EAE2C7867C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9AD35A-0CD1-437D-B26C-EAE2C7867C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
