@@ -1,0 +1,12 @@
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.exe.config
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.exe
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.pdb
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.csprojResolveAssemblyReference.cache
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.exe
+c:\users\jerry\documents\visual studio 2013\Projects\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.pdb
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.exe.config
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.exe
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.pdb
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.exe
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\bin\Debug\Test App 2 - Demo.pdb
+C:\Users\Enrique\Documents\GitHubVisualStudio\AprendeCSharp\Test App 2 - Demo\obj\Debug\Test App 2 - Demo.csprojResolveAssemblyReference.cache
