@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cortano-final", "Final\Cortano-final.csproj", "{4F565CC3-2060-45F5-A951-A40B3B9E4789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis-final", "Final\Jarvis-final.csproj", "{4F565CC3-2060-45F5-A951-A40B3B9E4789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cortano-inicio", "Inicio\Cortano-inicio\Cortano-inicio.csproj", "{331DA481-CC27-4988-937F-C5654BC0826D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis-inicio", "Inicio\Cortano-inicio\Jarvis-inicio.csproj", "{331DA481-CC27-4988-937F-C5654BC0826D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
