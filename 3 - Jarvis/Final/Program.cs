@@ -29,108 +29,108 @@ namespace Jarvis
             // Un daaado como el de dragones y mazmorras
             Random rand = new Random();
 
-            // This will greet the user in the default voice
-            synth.Speak("Bienvenido a cortano, que es mejor que cortana... y lo sabes!");
+            // Esto dara la vienvenida al usuario con un mensaje de voz
+            synth.Speak("Bienvenido a Jarvis que es mejor que cortana, y lo sabes!");
 
             #region My Performance Counters
-            // This will pull the current CPU load in percentage
+            // Nos da el porcentaje de la cpu
             PerformanceCounter perfCpuCount = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
             perfCpuCount.NextValue();
 
-            // This will pull the current available memory in Megabytes
+            // Da informacion de la memoria libre en MB
             PerformanceCounter perfMemCount = new PerformanceCounter("Memory", "Available MBytes");
             perfMemCount.NextValue();
 
-            // This will get us the system uptime (in seconds)
+            // Nos da el tiempo que lleva el pc encendido
             PerformanceCounter perfUptimeCount = new PerformanceCounter("System", "System Up Time");
             perfUptimeCount.NextValue();
             #endregion
 
             TimeSpan uptimeSpan = TimeSpan.FromSeconds(perfUptimeCount.NextValue());
-            string systemUptimeMessage = string.Format("The current system up time is {0} days {1} hours {2} minutes {3} seconds",
+            string systemUptimeMessage = string.Format("El sistema lleva encendido {0} dias {1} horas {2} minutos {3} segundos",
                 (int)uptimeSpan.TotalDays,
                 (int)uptimeSpan.Hours,
                 (int)uptimeSpan.Minutes,
                 (int)uptimeSpan.Seconds
                 );
 
-            // Tell the user what the current system uptime is
-            JerrySpeak(systemUptimeMessage, VoiceGender.Male, 2);
+            // Lee el tiempo que lleva encendido el pc
+            JarvisHabla(systemUptimeMessage, VoiceGender.Male, 2);
 
             int speechSpeed = 1;
             bool isChromeOpenedAlready = false;
 
-            // Infinite While Loop
+            // un while infinito
             while(true)
             {
-                // Get the current performance counter values
+                // Almacena los valores que queremos en un int
                 int currentCpuPercentage = (int)perfCpuCount.NextValue();
                 int currentAvailableMemory = (int)perfMemCount.NextValue();
 
-                // Every 1 second print the CPU load in percentage to the screen
-                Console.WriteLine("CPU Load        : {0}%", currentCpuPercentage);
-                Console.WriteLine("Available Memory: {0}", currentAvailableMemory);
+                // Cada segundo escribimos estos datos en la consola
+                Console.WriteLine("Carga de la CPU        : {0}%", currentCpuPercentage);
+                Console.WriteLine("Memoria disponible: {0}", currentAvailableMemory);
 
-                // Only tell us when the CPU is above 80% usage
+                // Solo entra cuando la CPU tiene mas de un 80% de uso
                 #region Logic
                 if ( currentCpuPercentage > 80 )
                 {
                     if (currentCpuPercentage == 100)
                     {
-                        // This is designed to prevent the speech speed from exceeding 5x normal
+                        // Esto impide que la velocidad sea demasiado rapido
                         string cpuLoadVocalMessage = cpuMaxedOutMessages[rand.Next(5)];
 
                         if (isChromeOpenedAlready == false)
                         {
-                            OpenWebsite("https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ#t=0");
+                            OpenWebsite("https://www.imagineware.org");
                             isChromeOpenedAlready = true;
                         }
-                        JerrySpeak(cpuLoadVocalMessage, VoiceGender.Male, speechSpeed);
+                        JarvisHabla(cpuLoadVocalMessage, VoiceGender.Male, speechSpeed);
                     }
                     else
                     {
-                        string cpuLoadVocalMessage = String.Format("The current CPU load is {0} percent", currentCpuPercentage);
-                        JerrySpeak(cpuLoadVocalMessage, VoiceGender.Female, 5);
+                        string cpuLoadVocalMessage = String.Format("La carga actual de la cpu {0} porciento", currentCpuPercentage);
+                        JarvisHabla(cpuLoadVocalMessage, VoiceGender.Female, 5);
                     }
                 }
                 #endregion
 
-                // Only tell us when memory is below one gigabyte
+                // Solo cuando tenemos menos de 1gb de memoria libre
                 if (currentAvailableMemory < 1024)
                 {
-                    // Speak to the user with text to speech to tell them what the current values are
-                    string memAvailableVocalMessage = String.Format("You currently have {0} megabytes of memory available", currentAvailableMemory);
-                    JerrySpeak(memAvailableVocalMessage, VoiceGender.Male, 10);
+                    // Hablamos con el tts los megas libres
+                    string memAvailableVocalMessage = String.Format("Tienes actualmente {0} megabytes de memoria libre", currentAvailableMemory);
+                    JarvisHabla(memAvailableVocalMessage, VoiceGender.Male, 10);
                 }
 
                 Thread.Sleep(1000);
-            } // end of loop
+            } // Fin del while
         }
 
         /// <summary>
-        /// Speaks with a selected voice
+        /// Habla con la voz seleccionada
         /// </summary>
         /// <param name="message"></param>
         /// <param name="voiceGender"></param>
-        public static void JerrySpeak(string message, VoiceGender voiceGender)
+        public static void JarvisHabla(string message, VoiceGender voiceGender)
         {
             synth.SelectVoiceByHints(voiceGender);
             synth.Speak(message);
         }
 
         /// <summary>
-        /// Speaks with a selected voice at a selected speed
+        /// Habla con la voz y velocidad seleccionadas
         /// </summary>
         /// <param name="message"></param>
         /// <param name="voiceGender"></param>
         /// <param name="rate"></param>
-        public static void JerrySpeak(string message, VoiceGender voiceGender, int rate)
+        public static void JarvisHabla(string message, VoiceGender voiceGender, int rate)
         {
             synth.Rate = rate;
-            JerrySpeak(message, voiceGender);
+            JarvisHabla(message, voiceGender);
         }
 
-        // Open a website
+        // Abre una web
         public static void OpenWebsite(string URL)
         {
             Process p1 = new Process();
