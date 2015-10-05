@@ -9,52 +9,54 @@ using System.Windows.Forms;
 using System.Media;
 
 //
-//  Application Name: Drunk PC
-//  Description: Application that generates erratic mouse and keyboard movements and input and generates system sounds and fake dialogs to confuse the user
-//  Topics:
-//    1) Threads
+//  Nombre de aplicación: PC Borracho
+//  Descripción: Aplicación que genera fallos en el ratón y teclado y movimientos de entrada y genera sonidos del sistema y diálogos falsos para confundir al usuario
+//  Puntos:
+//    1) Hilos
 //    2) System.Windows.Forms namespace & assembly
-//    3) Hidden application
+//    3) Aplicaciones en segundo pano
+//    4) Regiones en el código
 //
 
-namespace DrunkPC
+namespace PcBorracho
 {
     class Program
     {
         public static Random _random = new Random();
 
         public static int _startupDelaySeconds = 10;
-        public static int _totalDurationSeconds = 10;
+        public static int _totalDurationSeconds = 10000000;
 
+        #region Main
         /// <summary>
         /// Entry point for prank application
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("DrunkPC Prank Application by: Jerry (aka. Barnacules)");
+            Console.WriteLine("PC Borracho por: Jerry (aka. Barnacules)");
 
-            // Check for command line arguments and assign the new values
+            // Comprueba los arguments y asigna los nuevos valores
             if( args.Length >= 2 )
             {
                 _startupDelaySeconds = Convert.ToInt32(args[0]);
                 _totalDurationSeconds = Convert.ToInt32(args[1]);
             }
 
-            // Create all threads that manipulate all of the inputs and outputs to the system
+            // Crea todos los hilos y manipula todos los inputs y outputs del sistema
             Thread drunkMouseThread = new Thread(new ThreadStart(DrunkMouseThread));
             Thread drunkKeyboardThread = new Thread(new ThreadStart(DrunkKeyboardThread));
             Thread drunkSoundThread = new Thread(new ThreadStart(DrunkSoundThread));
             Thread drunkPopupThread = new Thread(new ThreadStart(DrunkPopupThread));
 
             DateTime future = DateTime.Now.AddSeconds(_startupDelaySeconds);
-            Console.WriteLine("Waiting 10 seconds before starting threads");
+            Console.WriteLine("Esperemos 10 segundos hasta que empiece el pedo.");
             while (future > DateTime.Now)
             {
                 Thread.Sleep(1000);
             }
 
-            // Start all of the threads
+            // Iniciamos todos los hilos
             drunkMouseThread.Start();
             drunkKeyboardThread.Start();
             drunkSoundThread.Start();
@@ -66,22 +68,24 @@ namespace DrunkPC
                 Thread.Sleep(1000);
             }
 
-            Console.WriteLine("Terminating all threads");
+            Console.WriteLine("Comienza la resaca.");
 
-            // Kill all threads and exit application
+            // Destruimos todos los hilos y terminamos de ejecutar la aplicación
             drunkMouseThread.Abort();
             drunkKeyboardThread.Abort();
             drunkSoundThread.Abort();
             drunkPopupThread.Abort();
         }
 
+        #endregion
+
         #region Thread Functions
         /// <summary>
-        /// This thread will randomly affect the mouse movements to screw with the end user
+        /// Este hilo afectará aleatoriamente al movimiento del ratón para molestar al usuario final
         /// </summary>
         public static void DrunkMouseThread()
         {
-            Console.WriteLine("DrunkMouseThread Started");
+            Console.WriteLine("Ratón borracho Iniciado");
 
             int moveX = 0;
             int moveY = 0;
@@ -92,11 +96,11 @@ namespace DrunkPC
 
                 if (_random.Next(100) > 50)
                 {
-                    // Generate the random amount to move the cursor on X and Y
+                    // Genera las posiciones aleatorias para mover el cursr en X e Y
                     moveX = _random.Next(20) - 10;
                     moveY = _random.Next(20) - 10;
 
-                    // Change mouse cursor position to new random coordinates
+                    // Cambia la posición del cursor del ratón a unas coordenadas aleatorias
                     Cursor.Position = new System.Drawing.Point(
                         Cursor.Position.X + moveX,
                         Cursor.Position.Y + moveY);
@@ -107,20 +111,20 @@ namespace DrunkPC
         }
 
         /// <summary>
-        /// This will generate random keyboard output to screw with the end user
+        /// Este método generará salidas de teclado aleatorias para molestar al usuario
         /// </summary>
         public static void DrunkKeyboardThread()
         {
-            Console.WriteLine("DrunkKeyboardThread Started");
+            Console.WriteLine("Teclado Borracho Iniciado");
 
             while (true)
             {
                 if (_random.Next(100) > 95)
                 {
-                    // Generate a random capitol letter
+                    // Genera una letra mayúscula aleatoria
                     char key = (char)(_random.Next(25) + 65);
 
-                    // 50/50 make it lower case
+                    // 50/50 lo crea en minúscula
                     if (_random.Next(2) == 0)
                     {
                         key = Char.ToLower(key);
@@ -134,7 +138,7 @@ namespace DrunkPC
         }
 
         /// <summary>
-        /// This will play system sounds at random to screw with the end user
+        /// Este método creará sonidos aleatorios para 
         /// </summary>
         public static void DrunkSoundThread()
         {
@@ -142,10 +146,10 @@ namespace DrunkPC
 
             while (true)
             {
-                // Determine if we're going to play a sound this time through the loop (20% odds)
-                if (_random.Next(100) > 80)
+                // Determina si vamos a reproducir sonido esta vez en el bucle (20% son raros)
+                if (_random.Next(100) > 0)
                 {
-                    // Randomly select a system sound
+                    // Selecciona un número aleatorio.
                     switch(_random.Next(5))
                     {
                         case 0:
@@ -171,30 +175,30 @@ namespace DrunkPC
         }
 
         /// <summary>
-        /// This thread will popup fake error notifications to make the user go crazy and pull their hair out
+        /// Este hilo hace saltar notificaciones para hacer sentir más loco al usuario
         /// </summary>
         public static void DrunkPopupThread()
         {
-            Console.WriteLine("DrunkPopupThread Started");
+            Console.WriteLine("Popup Borracho Iniciado");
 
             while (true)
             {
-                // Every 10 seconds roll the dice and 10% of the time show a dialog
+                // Cada 10 segundo ejecuta el hilo y el 10% de las veces ejecuta el código
                 if (_random.Next(100) > 90)
                 {
-                    // Determine which message to show user
+                    // Decide que mensaje mostrar
                     switch(_random.Next(2))
                     {
                         case 0:
                             MessageBox.Show(
-                               "Internet explorer has stopped working",
+                               "Internet Explorer ha dejado de funcionar",
                                 "Internet Explorer",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
                             break;
                         case 1:
                             MessageBox.Show(
-                               "Your system is running low on resources",
+                               "Tu sistema está funcionando bajo mínimos",
                                 "Microsoft Windows",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
