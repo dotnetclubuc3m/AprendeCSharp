@@ -14,23 +14,23 @@ namespace Jarvis
         private static SpeechSynthesizer synth = new SpeechSynthesizer();
 
         // 
-        //  WHERE ALL THE MAGIC HAPPENS!
+        //  DONDE TODA LA MAGIA OCURRE!!
         //  
         static void Main(string[] args)
         {
-            // List of messages that will be selected at random when the CPU is hammered!
+            // Lista de mensajes que apareceran si la CPU esta al máximo
             List<string> cpuMaxedOutMessages = new List<string>();
-            cpuMaxedOutMessages.Add("WARNING: Holy crap your CPU is about to catch fire!");
-            cpuMaxedOutMessages.Add("WARNING: oh my god you should not run your CPU that hard");
-            cpuMaxedOutMessages.Add("WARNING: Stop downloading the porn it's maxing me out");
-            cpuMaxedOutMessages.Add("WARNING: Your CPU is officially chasing squirrels");
-            cpuMaxedOutMessages.Add("RED ALERT! RED ALERT! RED ALERT! RED ALERT! I FARTED");
+            cpuMaxedOutMessages.Add("PELIGRO: Joder tu CPU está a punto de arder!");
+            cpuMaxedOutMessages.Add("PELIGRO: O dios mio para por favor");
+            cpuMaxedOutMessages.Add("PELIGRO: Deja de descargar porno, me estas sobrecargando");
+            cpuMaxedOutMessages.Add("PELIGRO: Tu CPU está persiguiendo ardillas");
+            cpuMaxedOutMessages.Add("Alerta roja! Alerta roja! Alerta roja! Alerta roja! ME HE TIRADO UN PEDO");
 
-            // The dice! LIKE DND
+            // Un daaado como el de dragones y mazmorras
             Random rand = new Random();
 
             // This will greet the user in the default voice
-            synth.Speak("Welcome to Jarvis version one point oh!");
+            synth.Speak("Bienvenido a cortano, que es mejor que cortana... y lo sabes!");
 
             #region My Performance Counters
             // This will pull the current CPU load in percentage
