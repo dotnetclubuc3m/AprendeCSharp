@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 Hello world-final", "1 Hello world-final.csproj", "{071FE949-ACFE-4BED-BDC9-B9132DD2F4B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 Hello world-final", "Hello world - final\1 Hello world-final.csproj", "{071FE949-ACFE-4BED-BDC9-B9132DD2F4B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello world-inicio", "..\Hello world-inicio\Hello world-inicio.csproj", "{7903CF8F-3BF2-4444-B4D4-68F00723E0D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello world-inicio", "Hello world-inicio\Hello world-inicio.csproj", "{7903CF8F-3BF2-4444-B4D4-68F00723E0D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
