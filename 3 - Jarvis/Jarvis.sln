@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis-final", "Final\Jarvi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis-inicio", "Inicio\Cortano-inicio\Jarvis-inicio.csproj", "{331DA481-CC27-4988-937F-C5654BC0826D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo-UsoExcesivoCPU", "Ejemplo\Ejemplo-UsoExcesivoCPU\Ejemplo-UsoExcesivoCPU.csproj", "{5293AF64-DDE8-4FC2-B3A9-751B14B46801}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{331DA481-CC27-4988-937F-C5654BC0826D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{331DA481-CC27-4988-937F-C5654BC0826D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{331DA481-CC27-4988-937F-C5654BC0826D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5293AF64-DDE8-4FC2-B3A9-751B14B46801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5293AF64-DDE8-4FC2-B3A9-751B14B46801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5293AF64-DDE8-4FC2-B3A9-751B14B46801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5293AF64-DDE8-4FC2-B3A9-751B14B46801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
