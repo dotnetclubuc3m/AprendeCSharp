@@ -1,57 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-// Added references
-// System.Web.Dll
-
-// Added namespaces
-using System.Web;
-using System.Threading;
-
-namespace TestApp2Demo
+namespace BolaMagica
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // We want to save the current console color so we can restore it later
+            // Guardamos el viejo color del texto de la consola por si se quiere reutilizar
             ConsoleColor oldColor = Console.ForegroundColor;
 
-            // Set the new console color to Green
+            // Ejemplo de cambio de color del texto de cosola
             Console.ForegroundColor = ConsoleColor.Green;
             
-            // Tell everyone what this program is when it starts
-            Console.WriteLine("Welcome to #Codegasm episode 2 - Magic 8 ball app");
+            // Pequeño resumen de la app
+            Console.WriteLine("Bienvenido a AprendeCSharp 2 - Aplicación de Bola Mágica");
 
             Random random = new Random();
+            //Bucle infinito
             while (true)
             {
-                Console.Write("Ask any question: ");
+                Console.Write("Pregunta lo que te inquieta: ");
                 string question = Console.ReadLine();
                 if( question.ToLower() == "quit")
                 {
+                    //Terminamos el bloque si el usuario escribe quit
                     break;
                 }
                 Console.Write("Answer: ");
+                //Selecciona un número aleatorio del 0 al 5
                 switch( random.Next(5) )
                 {
                     case 0:
-                        Console.WriteLine("Yes!");
+                        Console.WriteLine("Si!");
                         break;
                     case 1:
-                        Console.WriteLine("Hell No!");
+                        Console.WriteLine("Diablos no!");
                         break;
                     case 2:
-                        Console.WriteLine("Probably.");
+                        Console.WriteLine("Quizás.");
                         break;
                     case 3:
-                        Console.WriteLine("WTF do you think?");
+                        Console.WriteLine("Pero que c#@$*es?");
                         break;
                     case 4:
-                        Console.WriteLine("I don't understand the question?!?!");
+                        Console.WriteLine("No entiendo la pregunta?!?!");
                         break;
                 }
             }
