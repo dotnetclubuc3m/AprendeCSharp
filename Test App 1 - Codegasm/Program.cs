@@ -5,42 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Namespace
-namespace JerrysCoolAppCode
+namespace HelloWorld
 {
-    // Class (contains functionality)
+    // Class (Contiene la funcionalidad)
     class Program
     {
-        // Function (entry point)
+        // Function (Punto de entrada)
         static void Main(string[] args)
         {
-            PrintFooToScreen100Times();
+            PrintclubNETImaginewareToScreen100times();
 
-            Console.WriteLine("Type a number, any number?");
+            Console.WriteLine("Escribe un número?");
             ConsoleKeyInfo keyInfo = Console.ReadKey();
 
             if (keyInfo.KeyChar == 'a')
-            {
-                Console.WriteLine("That is not a number! KNOCK IT OFF NOW!");
-            }
+                {
+                    Console.WriteLine("\nEso no es un numero! PARA YA!");
+                }
             else
-            {
-                Console.WriteLine("Did you type {0}", keyInfo.KeyChar.ToString());
-            }
+                {
+                    Console.WriteLine("\nHas escrito {0}", keyInfo.KeyChar.ToString());
+                }
+            Console.ReadKey();
         }
-
         /// <summary>
-        /// All this function does is print Foo to the screen
+        /// Este método escribe por pantalla 100 veces club.NET-Imagineware
         /// </summary>
-        static void PrintFooToScreen()
+        static void PrintclubNETImaginewareToScreen()
         {
-            Console.WriteLine("Foo");
+            Console.WriteLine("club.NET-Imagineware");
         }
 
-        static void PrintFooToScreen100Times()
+        static void PrintclubNETImaginewareToScreen100times()
         {
             for(int counter=0; counter <= 100; counter++)
             {
-                PrintFooToScreen();
+                PrintclubNETImaginewareToScreen();
             }
         }
     }
